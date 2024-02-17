@@ -1,7 +1,7 @@
 package org.assesment.services;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-import jakarta.inject.Singleton;
 import jakarta.ws.rs.core.MultivaluedMap;
 import org.apache.commons.io.IOUtils;
 import org.assesment.services.exceptions.DuplicatedFileException;
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-@Singleton
+@ApplicationScoped
 public class PdfUploadService {
     @ConfigProperty(name = "upload.directory")
     String UPLOAD_DIR;
