@@ -1,6 +1,8 @@
 package org.assesment.services.exceptions;
 
-public class DuplicatedFileException extends RuntimeException {
+import jakarta.ws.rs.WebApplicationException;
+
+public class DuplicatedFileException extends WebApplicationException {
     public DuplicatedFileException(String message) {
         super(message);
     }
